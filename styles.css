@@ -17,6 +17,22 @@ body{
     background: slategrey;
 }
 
+.site-650{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    min-height: 100vh;
+    background: slategrey;
+
+}
+
+.site-less-than-650{
+    width: 0;
+    height: 0;
+    display: none;
+}
+
 /* ========== HEADER AND FOOTER ========== */
 .header ,.footer{
     width: 70vw;
@@ -170,4 +186,24 @@ body{
 
 .result-details li b{
     font-weight: 500;
+}
+
+/*if the width is less than 650px*/
+@media all and (max-width: 650px) {
+    .site-650{
+        display: none;
+    }
+
+    .site-less-than-650{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .site-less-than-650 .less-width{
+        width: 70vw;
+        height: 60vh;
+        font-size: 20px;
+    }
 }
